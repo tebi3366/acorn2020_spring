@@ -19,7 +19,7 @@ public class MemberController {
 	//POST 방식 /member/update 요청 처리
 	@RequestMapping(value = "/member/update", method=RequestMethod.POST)
 	public String update(@ModelAttribute MemberDto dto) {
-		
+			
 		service.updateMember(dto);
 		
 		return "member/update";

@@ -15,13 +15,14 @@ import org.springframework.stereotype.Component;
 public class WritingAspect {
 	//메소드가 수행되기 바로 이전에 적용될수 있도록 설정하는 어노테이션 , 메소드가 리턴하는 값들 조사를 하거나 조작을 할수없다
 	@Before("execution(void write*())")
-	public void prepare() {
+	public void prepare() {	
 		System.out.println("pen 을 준비해요");
 	}
 	@After("execution(void write*())")
 	public void end() {
 		System.out.println("다 사용한 pen 을 마무리 해요.");
 	}
+	//@어라운드가 더 자주씀
 }
 /*
  * 	-Aspectj Expression
